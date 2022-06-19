@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import NavBar from './Navbar';
 
 class Choose extends Component {
 
@@ -52,22 +53,26 @@ class Choose extends Component {
         const electionList = this.state.final.map(election => {
             return (
                 <div className="contact" key={election.election_id}>
-                    <li className="collection-item avatar">
-                        <i className="material-icons circle blue darken-2">ballot</i>
-                        <Link to={"/vote/" + election.election_id} className="title" onClick={this.handleInputChange}>{election.election_name}</Link>
+                    <li className="collection-item avatar" style={{paddingTop:'20px'}}>
+                        {/* <i class="fa-solid fa-check-to-slot fa-xl" style={{color: '#F50057',fontSize:'30px',marginRight:'20px'}}></i> */}
+                        <i style={{color: '#F50057',fontSize:'30px',marginRight:'20px'}}><img src='https://img.icons8.com/external-bearicons-outline-color-bearicons/452/external-Vote-yes-or-no-bearicons-outline-color-bearicons.png' width='50px' height='50px'/></i>
+                        <Link to={"/vote/" + election.election_id} style={{textDecoration:'none',fontSize: '24px',color : '#fff',marginTop:'10px'}} className="title vote-list" onClick={this.handleInputChange}>{election.election_name}</Link>
                     </li>
                 </div>
             )
         }) 
         return(
-            <div className="container">
+            <>
+            <NavBar />
+            <div className="container vote-collection">
                 <ul className="collection">
                     <li className="collection-item avatar">
-                        <h3>Elections</h3>
+                        <h3 style={{color:'orange', fontSize:'30px'}}>Elections</h3>
                     </li>
                         {electionList}
                 </ul>
             </div>
+            </>
         )
     }
 }

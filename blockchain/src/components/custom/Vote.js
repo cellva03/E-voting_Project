@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Web3 from 'web3';
 import Election from '../../build/Election.json'
-import { Link } from 'react-router-dom'
+import './vote.css'
+// import { Link } from 'react-router-dom'
 
 class Vote extends Component {
 
@@ -93,10 +94,10 @@ class Vote extends Component {
             return (
                 <div className="contact" key={candidates.id}>
                     <li className="collection-item avatar">
-                        <i className="material-icons circle blue darken-2">ballot</i>
-                        <p><b>{candidates.name}</b></p>
-                        <p>{candidates.details}</p>
-                        <a href="" className="secondary-content"><button id={candidates.id} onClick={this.handleInputChange} className="waves-effect waves-light btn blue darken-2">Vote</button></a>
+                    <i class="fa-solid fa-check-to-slot fa-xl" style={{color: '#F50057',fontSize:'30px',marginRight:'20px'}}></i>
+                        <p style={{display:'inline-block'}}><b>{candidates.name}</b></p><br></br>
+                        <p style={{marginLeft:'50px'}}>{candidates.details}</p>
+                        <a href="" className="secondary-content"><button className='vote-btn' id={candidates.id} onClick={this.handleInputChange} >Vote</button></a>
                     </li>
                 </div>
             )

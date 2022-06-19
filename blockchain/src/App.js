@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import NewElection from './components/custom/NewElection';
-import NavBar from './components/custom/Navbar';
+// import NavBar from './components/custom/Navbar';
 import Home from './components/custom/Home';
 import Vote from './components/custom/Vote';
 import VoteCount from './components/custom/VoteCount';
@@ -9,6 +9,9 @@ import Choose from './components/custom/Choose';
 import { BrowserRouter, Route } from 'react-router-dom';
 import NewCandidate from './components/custom/NewCandidate';
 import Login from './components/custom/Login';
+import "aos/dist/aos.css";
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Template from './components/custom/Home/Home';
 
 class App extends Component {
 
@@ -20,8 +23,9 @@ class App extends Component {
         return (
         <BrowserRouter>
             <div className="App">
-                <NavBar getVal={this.getVal}/>
-                <Route exact path="/" component={Home} />
+                {/* <NavBar getVal={this.getVal}/> */}
+                <Route exact path="/" component={Template} />
+                <Route exact path="/home" component={Home} />
                 <Route exact path="/newelection" component={NewElection} />
                 <Route exact path="/elections" component={ElectionData} />
                 <Route exact path="/candidates/:id" component={NewCandidate} />

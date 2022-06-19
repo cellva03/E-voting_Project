@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Web3 from 'web3';
 import Election from '../../build/Election.json'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 class VoteCount extends Component {
 

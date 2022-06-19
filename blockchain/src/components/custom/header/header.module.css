@@ -1,0 +1,10 @@
+.homeNav{
+    background-color: #151719 !important;
+}
+.blockvote_title{
+    margin:0 0 0 70px;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}

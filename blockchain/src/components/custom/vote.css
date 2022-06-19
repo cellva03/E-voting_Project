@@ -1,0 +1,23 @@
+.vote-btn{
+    position: relative;
+    display: inline-block;
+    padding: 7px 10px;
+    color: #F50057;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    /* overflow: hidden; */
+    transition: 0.5s;
+    /* margin-top: 40px; */
+    outline: none;
+    border: none;
+    letter-spacing: 4px;
+}
+
+.vote-btn:hover {
+    background: #F50057;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #F50057, 0 0 25px #F50057, 0 0 50px #F50057,
+      0 0 100px #F50057;
+  }

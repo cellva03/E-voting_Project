@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Web3 from 'web3';
+import'./choose.css'
 import Election from '../../build/Election.json'
 
 
@@ -56,7 +57,7 @@ class NewCandidate extends Component{
         .once('receipt', (receipt) => {
             console.log(receipt);
           this.setState({ loading: false })
-          window.location.assign("/");
+          window.location.assign("/home");
         })
     }
     
@@ -81,13 +82,18 @@ class NewCandidate extends Component{
 
     render(){
         return(
-            <div className="container">
+            <div className="new-election">
+                <center><h4>Add New Candidate</h4></center><br></br>
                 <form onSubmit={this.handleSubmit}>
-                    <input type="text" id="candidate_name" name="candidate_name" onChange={this.handleInputChange} required/>
-                    <label htmlFor="name">Candidate Name</label><br></br>
-                    <input type="text" id="candidate_details" name="candidate_details" onChange={this.handleInputChange} required/>
-                    <label htmlFor="name">Candidate details</label><br></br><br></br>
-                    <button className="btn blue darken-2" type="submit" name="action">Submit
+                    <div class="text-field">
+                        <input type="text" id="candidate_name" name="candidate_name" autocomplete='off' onChange={this.handleInputChange} required/>
+                        <label htmlFor="name">Candidate Name</label>
+                    </div><br></br>
+                    <div class="text-field">
+                    <input type="text" id="candidate_details" name="candidate_details" autocomplete='off' onChange={this.handleInputChange} required/>
+                    <label htmlFor="name">Candidate details</label>
+                    </div><br></br>
+                    <button type="submit" name="action">Submit
                         <i className="material-icons right">send</i>
                     </button>
                 </form>

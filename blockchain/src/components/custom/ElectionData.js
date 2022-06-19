@@ -55,9 +55,9 @@ class ElectionData extends Component {
             return (
                 <div className="contact" key={election.election_id}>
                     <li className="collection-item avatar">
-                        <i className="material-icons circle blue darken-2">ballot</i>
-                        <p><b>{election.election_name}</b></p>
-                        <br></br>
+                    <i class="fa-solid fa-check-to-slot fa-xl" style={{color: '#F50057',display:'inline-block',fontSize:'30px',marginRight:'20px'}}></i>
+                        <p style={{display:'inline-block'}}><b>{election.election_name}</b></p>
+                        <br></br><br></br>
                         <Link to={"/candidates/" + election.election_id} className="title" onClick={this.handleInputChange}><button id={election.election_id} className="waves-effect waves-light btn yellow darken-3">Add candidate</button></Link>
                         &nbsp;&nbsp;&nbsp;
                         <Link to={"/voteCount/" + election.election_id} className="title" onClick={this.handleInputChange}><button id={election.election_id} className="waves-effect waves-light btn red darken-3">View vote Count</button></Link>

@@ -1,0 +1,112 @@
+.container{
+    margin-top: 8%;
+}
+
+.content_p{
+    font-size: 18px;
+    color: #87929c;
+}
+
+@media only screen and (max-width: 500px) {
+    .content_p{
+        font-size: 14px;
+        color: #87929c;
+    }
+}
+
+.start_btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.btn{
+    background-color: #F50057;
+    border-radius: 0;
+}
+
+h1{
+    font-weight: 800;
+}
+
+.fa-address-card{
+    margin-left: 1%;
+    font-size: 1.5rem;
+}
+
+.content_span{
+    color: #F50057;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.image{
+    margin-top: 5em;
+    background-color: #25282c;
+    position: relative;
+    width: 500px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.image img{
+    z-index: 111;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.text_box{
+    z-index: 222;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 40px;
+    line-height: 30px;
+    max-width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transform: translate(-50px,100px);
+}
+
+.workflow{
+    margin-top: 6%;
+}
+
+.workflow_title{
+    color: #F50057;
+}
+.info{
+    width: 400px;
+    padding: 50px;
+}
+
+.info p{
+    line-height: 2em;
+}
+
+@media only screen and (max-width: 770px) {
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+    .workflow{
+    position: inherit; 
+    margin-top: 6%;
+    }
+    .text_box{
+        transform: none;
+        margin-top: 4%;
+    }
+}

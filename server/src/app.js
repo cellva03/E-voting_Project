@@ -50,13 +50,14 @@ app.post('/api/electionName', async function(req, res) {
 });
 
 app.post('/api/adminLogin', async function(req, res) {
-    // console.log(req.body);
+    console.log(req.body);
     admin.findOne({
         username: req.body.username,
         password: req.body.password
     }).then(election => {
+        console.log(election);
         if(election === null){
-            res.send(true);
+            res.send(false);
         }else{
             res.send(true);
         }
