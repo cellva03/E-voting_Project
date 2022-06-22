@@ -94,7 +94,7 @@ class Vote extends Component {
             return (
                 <div className="contact" key={candidates.id}>
                     <li className="collection-item avatar">
-                    <i class="fa-solid fa-check-to-slot fa-xl" style={{color: '#F50057',fontSize:'30px',marginRight:'20px'}}></i>
+                        <i class="fa-solid fa-check-to-slot fa-xl" style={{color: '#F50057',fontSize:'30px',marginRight:'20px'}}></i>
                         <p style={{display:'inline-block'}}><b>{candidates.name}</b></p><br></br>
                         <p style={{marginLeft:'50px'}}>{candidates.details}</p>
                         <a href="" className="secondary-content"><button className='vote-btn' id={candidates.id} onClick={this.handleInputChange} >Vote</button></a>

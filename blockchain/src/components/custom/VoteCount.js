@@ -93,7 +93,7 @@ class VoteCount extends Component {
             return (
                 <div className="contact" key={candidates.id}>
                     <li className="collection-item avatar">
-                        <i className="material-icons circle blue darken-2">ballot</i>
+                        <i class="fa-solid fa-check-to-slot fa-xl" style={{color: '#F50057',fontSize:'30px',marginRight:'20px'}}></i>
                         <p><b>{candidates.name}</b></p>
                         <p>{candidates.details}</p>
                         <p className="secondary-content"><b>{candidates.voteCount}</b></p>
